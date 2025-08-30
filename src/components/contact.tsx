@@ -42,6 +42,10 @@ export function Contact() {
                 </div>
               </div>
               <div className="space-y-2 text-left">
+                <Label htmlFor="whatsapp">WhatsApp Number (Optional)</Label>
+                <Input id="whatsapp" type="tel" placeholder="+1 (555) 123-4567" />
+              </div>
+              <div className="space-y-2 text-left">
                 <Label htmlFor="message">Message</Label>
                 <Textarea id="message" placeholder="Your message..." rows={5} required />
               </div>
