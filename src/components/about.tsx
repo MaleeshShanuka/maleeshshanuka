@@ -4,8 +4,8 @@ export function About() {
   return (
     <section id="about" className="w-full py-12 md:py-24 lg:py-32 scroll-mt-16">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-          <div className="space-y-4">
+        <div className="flex flex-nowrap gap-10 lg:gap-16 items-center">
+          <div className="space-y-4 flex-1">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none font-headline text-primary">
                 A/L ICT Educator
