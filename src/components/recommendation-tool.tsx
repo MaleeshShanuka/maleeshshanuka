@@ -1,6 +1,7 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import { getRecommendedClasses, type RecommendationState } from "@/app/actions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -23,7 +24,7 @@ function SubmitButton() {
 
 export function RecommendationTool() {
   const initialState: RecommendationState = { message: "" };
-  const [state, formAction] = useFormState(getRecommendedClasses, initialState);
+  const [state, formAction] = useActionState(getRecommendedClasses, initialState);
   const formRef = useRef<HTMLFormElement>(null);
   const { toast } = useToast();
 
