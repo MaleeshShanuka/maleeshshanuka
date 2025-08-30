@@ -45,14 +45,14 @@ export function RecommendationTool() {
       <div className="container px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary">Find Your Perfect Class</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary">Find Your Perfect Course</h2>
             <p className="max-w-[600px] text-foreground/70 md:text-xl/relaxed">
-              Not sure where to start? Let our AI-powered tool recommend the perfect class for you. Just tell us a bit about your interests and experience, and we'll do the rest!
+              Not sure which course is right for you? Our AI-powered tool can help. Tell us your interests and background, and we'll suggest the best path for your ICT education.
             </p>
             <form ref={formRef} action={formAction} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="interests" className="text-lg">Your Interests</Label>
-                <Textarea id="interests" name="interests" placeholder="e.g., 'I love expressive dance, learning new instruments, and painting landscapes.'" rows={4} />
+                <Textarea id="interests" name="interests" placeholder="e.g., 'I enjoy web design, solving logic puzzles, and want to learn about cybersecurity.'" rows={4} />
                 {state.errors?.interests && <p className="text-sm text-destructive">{state.errors.interests[0]}</p>}
               </div>
               <div className="space-y-3">
@@ -74,8 +74,8 @@ export function RecommendationTool() {
                 {state.errors?.experienceLevel && <p className="text-sm text-destructive">{state.errors.experienceLevel[0]}</p>}
               </div>
               <div className="space-y-2">
-                <Label htmlFor="professionalHistory" className="text-lg">Professional History (Optional)</Label>
-                <Textarea id="professionalHistory" name="professionalHistory" placeholder="e.g., 'I worked as a graphic designer for 5 years.'" rows={3} />
+                <Label htmlFor="professionalHistory" className="text-lg">Academic/Professional History (Optional)</Label>
+                <Textarea id="professionalHistory" name="professionalHistory" placeholder="e.g., 'Completed O/L with an interest in science subjects.'" rows={3} />
               </div>
               <SubmitButton />
             </form>

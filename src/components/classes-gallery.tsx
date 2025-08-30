@@ -3,22 +3,22 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 const classes = [
   {
-    title: "Contemporary Dance Fundamentals",
-    description: "Discover the freedom of expression through contemporary dance. This class focuses on core techniques, improvisation, and connecting movement with emotion. Suitable for all levels.",
+    title: "Advanced Web Development",
+    description: "Master modern web technologies including React, Next.js, and serverless functions. This course covers everything from front-end frameworks to back-end architecture.",
     image: "https://picsum.photos/600/400",
-    aiHint: "dancing couple",
+    aiHint: "web development",
   },
   {
-    title: "Abstract Painting Workshop",
-    description: "Unleash your inner artist in this hands-on workshop. Learn to work with acrylics, explore color theory, and develop your unique abstract style. No prior experience needed.",
+    title: "Data Structures & Algorithms",
+    description: "Deep dive into the fundamental concepts of data structures and algorithms. Essential for competitive programming and technical interviews. Python and Java examples.",
     image: "https://picsum.photos/600/401",
-    aiHint: "painting easel",
+    aiHint: "algorithm flowchart",
   },
   {
-    title: "Acoustic Guitar for Beginners",
-    description: "Strum your first chords and learn to play your favorite songs. This beginner-friendly course covers basic guitar techniques, music theory, and a repertoire of popular tunes.",
+    title: "Cybersecurity Essentials",
+    description: "Learn the principles of cybersecurity, including network security, cryptography, and ethical hacking. Protect systems from cyber threats and attacks.",
     image: "https://picsum.photos/600/402",
-    aiHint: "playing guitar",
+    aiHint: "cyber security",
   },
 ];
 
@@ -28,9 +28,9 @@ export function ClassesGallery() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary">Our Classes</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary">Our Courses</h2>
             <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Explore our range of classes designed to ignite your creativity and passion. Whether you're a beginner or an experienced artist, there's something here for you.
+              Explore our range of A/L ICT courses designed to build a strong foundation and advanced skills in computer science.
             </p>
           </div>
         </div>

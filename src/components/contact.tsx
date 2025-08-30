@@ -14,7 +14,7 @@ export function Contact() {
         event.preventDefault();
         toast({
             title: "Message Sent!",
-            description: "Thank you for reaching out. We'll get back to you soon.",
+            description: "Thank you for reaching out. I'll get back to you soon.",
         });
         (event.target as HTMLFormElement).reset();
     }
@@ -24,9 +24,9 @@ export function Contact() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary">Get in Touch</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary">Contact Me</h2>
             <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Have a question, a project idea, or just want to say hello? Drop a line below!
+              Have a question about a course, a project idea, or just want to connect? Drop a line below!
             </p>
           </div>
           <div className="w-full max-w-xl mx-auto pt-8">
