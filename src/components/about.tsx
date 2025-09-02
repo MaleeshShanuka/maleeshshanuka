@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function About() {
   return (
-    <section id="about" className="w-full pt-6 md:pt-12 lg:pt-16 pb-12 md:pb-24 lg:pb-32 scroll-mt-16">
+    <section id="about" className="w-full pt-6 md:pt-12 lg:pt-16 pb-6 md:pb-12 lg:pb-16 scroll-mt-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 lg:gap-16 items-center md:grid-cols-2">
           <div className="space-y-4">
