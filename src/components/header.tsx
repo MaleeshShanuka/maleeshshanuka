@@ -20,8 +20,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6 pl-12 md:pl-20 pr-4 md:pr-0">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <div className="h-6 w-6 text-primary font-bold text-2xl flex items-center justify-center">&lt;/&gt;</div>
-          <span className="font-bold font-headline text-lg">Advanced Level | ICT</span>
+          <div className="text-primary font-bold text-lg flex items-center justify-center">&lt;<span className="font-bold font-headline text-lg px-1">Advanced Level | ICT</span>/&gt;</div>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks.map((link) => (
@@ -45,8 +44,7 @@ export function Header() {
           <SheetContent side="right">
             <div className="flex flex-col gap-6 p-6">
               <Link href="/" className="flex items-center gap-2" prefetch={false} onClick={() => setIsMenuOpen(false)}>
-                <div className="h-6 w-6 text-primary font-bold text-2xl flex items-center justify-center">&lt;/&gt;</div>
-                <span className="font-bold font-headline text-lg">Advanced Level | ICT</span>
+                <div className="text-primary font-bold text-lg flex items-center justify-center">&lt;<span className="font-bold font-headline text-lg px-1">Advanced Level | ICT</span>/&gt;</div>
               </Link>
               <nav className="grid gap-4">
                 {navLinks.map((link) => (
