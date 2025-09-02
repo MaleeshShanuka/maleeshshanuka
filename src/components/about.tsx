@@ -3,8 +3,8 @@ import Image from 'next/image';
 export function About() {
   return (
     <section id="about" className="w-full py-12 md:py-24 lg:py-32 scroll-mt-16">
-      <div className="container px-4 md:px-6 pl-12 md:pl-16">
-        <div className="grid grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="container px-4 md:px-6">
+        <div className="grid gap-10 lg:gap-16 items-center md:grid-cols-2">
           <div className="space-y-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none font-headline text-primary">
