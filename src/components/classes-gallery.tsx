@@ -24,7 +24,7 @@ const classes = [
 
 export function ClassesGallery() {
   return (
-    <section id="classes" className="w-full pt-6 md:pt-12 lg:pt-16 pb-6 bg-card scroll-mt-16">
+    <section id="classes" className="w-full pt-6 md:pt-8 lg:pt-12 pb-0 bg-card scroll-mt-16">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
