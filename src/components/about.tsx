@@ -8,7 +8,7 @@ export function About() {
           <div className="space-y-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none font-headline text-primary">
-                A/L ICT Educator
+                Maleesh Shanuka
               </h1>
               <h2 className="text-xl md:text-2xl font-headline text-foreground/80">
                 Teacher, Coder, Innovator
