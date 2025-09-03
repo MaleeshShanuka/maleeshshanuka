@@ -55,7 +55,7 @@ export function Contact() {
             <Link href="https://www.linkedin.com/in/maleeshshanuka/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
-            <Link href="#" target="_blank" rel="noopener noreferrer">
+            <Link href="https://x.com/MaleeshShanuka" target="_blank" rel="noopener noreferrer">
               <Twitter className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
             <Link href="https://youtube.com/@maleeshshanuka" target="_blank" rel="noopener noreferrer">
