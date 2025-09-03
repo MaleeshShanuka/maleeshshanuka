@@ -58,7 +58,7 @@ export function Contact() {
             <Link href="#" target="_blank" rel="noopener noreferrer">
               <Twitter className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
-            <Link href="#" target="_blank" rel="noopener noreferrer">
+            <Link href="https://youtube.com/@maleeshshanuka" target="_blank" rel="noopener noreferrer">
               <Youtube className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
             <Link href="#" target="_blank" rel="noopener noreferrer">
