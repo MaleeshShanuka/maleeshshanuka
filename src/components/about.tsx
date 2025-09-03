@@ -14,8 +14,8 @@ export function About() {
                 BSc. (Hons) in Information Technology <br /> University of Moratuwa
               </h2>
             </div>
-            <div className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-center py-4 tracking-tight space-y-4 relative">
-                <span className="absolute -top-4 left-0 text-8xl text-primary/20">“</span>
+            <div className="text-5xl md:text-6xl lg:text-7xl font-extrabold py-4 tracking-tight space-y-4 relative">
+                <span className="absolute -top-4 -left-4 text-8xl text-primary/20">“</span>
               <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Learn</div>
               <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Code</div>
               <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Create</div>
