@@ -59,7 +59,7 @@ export function Contact() {
               Have a question about a class, a course, or just want to connect? Drop a line below!
             </p>
           </div>
-          <div className="flex space-x-4 pt-4">
+          <div className="flex space-x-4 pt-4 items-center">
             <Link href="https://www.facebook.com/share/17AG2Wzfuq/" target="_blank" rel="noopener noreferrer">
               <Facebook className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
@@ -70,7 +70,7 @@ export function Contact() {
               <Linkedin className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
             <Link href="https://x.com/MaleeshShanuka" target="_blank" rel="noopener noreferrer">
-              <XIcon className="h-6 w-6 text-foreground/70 hover:text-primary transition-colors" />
+              <XIcon className="h-5 w-5 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
             <Link href="https://youtube.com/@maleeshshanuka" target="_blank" rel="noopener noreferrer">
               <Youtube className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
