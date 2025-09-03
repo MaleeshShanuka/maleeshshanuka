@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 const classes = [
   {
     title: "A/L 2027 Sinhala Medium Onikmin Kuliyapitiya",
-    description: "Time : 08.30 a.m. - 10.30 a.m.<br/>Day : Sunday<br/>Location: Kuliyapitiya",
+    description: "Time : 08.30 am - 10.30 am<br/>Day : Sunday<br/>Location: Kuliyapitiya",
     image: "https://picsum.photos/600/400",
     aiHint: "web development",
   },
