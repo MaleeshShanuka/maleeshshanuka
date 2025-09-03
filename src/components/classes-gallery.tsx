@@ -30,7 +30,7 @@ export function ClassesGallery() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary" dangerouslySetInnerHTML={{ __html: 'Our&nbsp;Classes' }} />
             <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Join with our A/L classes to gather a deep knowledge and advanced skills in ICT
+              Join with our A/L classes to gather a deep knowledge and advanced skills in Information and Communication Technology
             </p>
           </div>
         </div>
