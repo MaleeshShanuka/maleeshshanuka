@@ -70,7 +70,7 @@ export function Contact() {
               <Linkedin className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
             <Link href="https://x.com/MaleeshShanuka" target="_blank" rel="noopener noreferrer">
-              <XIcon className="h-7 w-7 text-foreground/70 hover:text-primary transition-colors" />
+              <XIcon className="h-6 w-6 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
             <Link href="https://youtube.com/@maleeshshanuka" target="_blank" rel="noopener noreferrer">
               <Youtube className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
