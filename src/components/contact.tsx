@@ -42,7 +42,7 @@ export function Contact() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary">Contact Me</h2>
             <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Have a question about a class, a project idea, or just want to connect? Drop a line below!
+              Have a question about a class, a course, or just want to connect? Drop a line below!
             </p>
           </div>
           <div className="flex space-x-4 pt-4">
