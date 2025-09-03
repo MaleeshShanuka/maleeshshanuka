@@ -64,7 +64,7 @@ export function Contact() {
             <Link href="#" target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
-            <Link href="mailto:example@example.com" target="_blank" rel="noopener noreferrer">
+            <Link href="mailto:maleeshshanuka@gmail.com" target="_blank" rel="noopener noreferrer">
               <Mail className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
           </div>
