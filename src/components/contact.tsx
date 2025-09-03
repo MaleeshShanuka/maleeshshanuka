@@ -61,7 +61,7 @@ export function Contact() {
             <Link href="https://youtube.com/@maleeshshanuka" target="_blank" rel="noopener noreferrer">
               <Youtube className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
-            <Link href="#" target="_blank" rel="noopener noreferrer">
+            <Link href="https://wa.me/94762897867" target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
             <Link href="mailto:maleeshshanuka@gmail.com" target="_blank" rel="noopener noreferrer">
