@@ -71,13 +71,13 @@ export function Contact() {
               <Linkedin className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
             <Link href="https://x.com/MaleeshShanuka" target="_blank" rel="noopener noreferrer">
-              <XIcon className="h-6 w-6 text-foreground/70 hover:text-primary transition-colors" />
+              <XIcon className="h-5 w-5 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
             <Link href="https://youtube.com/@maleeshshanuka" target="_blank" rel="noopener noreferrer">
-              <Youtube className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
+              <Youtube className="h-9 w-9 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
             <Link href="https://wa.me/94762897867" target="_blank" rel="noopener noreferrer">
-              <WhatsAppIcon className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
+              <WhatsAppIcon className="h-7 w-7 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
             <Link href="mailto:maleeshshanuka@gmail.com" target="_blank" rel="noopener noreferrer">
               <Mail className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
