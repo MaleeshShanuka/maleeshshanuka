@@ -49,10 +49,10 @@ export function Contact() {
             <Link href="https://www.facebook.com/share/17AG2Wzfuq/" target="_blank" rel="noopener noreferrer">
               <Facebook className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
-            <Link href="#" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.instagram.com/maleeshshanuka/" target="_blank" rel="noopener noreferrer">
               <Instagram className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
-            <Link href="#" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.linkedin.com/in/maleeshshanuka/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
             <Link href="#" target="_blank" rel="noopener noreferrer">
