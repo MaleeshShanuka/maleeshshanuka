@@ -21,6 +21,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
           <div className="text-primary font-bold text-lg flex items-center justify-center"><span className="font-bold font-headline text-lg px-1">Advanced Level | ICT</span></div>
         </Link>
+        <div className="flex-grow" />
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
@@ -35,7 +36,7 @@ export function Header() {
         </nav>
         <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden">
+            <Button variant="ghost" size="icon" className="md:hidden ml-4">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Open menu</span>
             </Button>
