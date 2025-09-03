@@ -1,12 +1,24 @@
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Clock, Calendar, MapPin } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
+type ClassDetail = {
+  Icon: LucideIcon;
+  text: string;
+};
 
 const classes = [
   {
     title: "A/L 2027 Sinhala Medium Onikmin Kuliyapitiya",
-    description: "Time : 08.30 am - 10.30 am<br/>Day : Sunday<br/>Location: Kuliyapitiya",
+    details: [
+      { Icon: Clock, text: "Time : 08.30 am - 10.30 am" },
+      { Icon: Calendar, text: "Day : Sunday" },
+      { Icon: MapPin, text: "Location: Kuliyapitiya" },
+    ],
     image: "https://picsum.photos/600/400",
     aiHint: "web development",
+    description: "Time : 08.30 am - 10.30 am<br/>Day : Sunday<br/>Location: Kuliyapitiya",
   },
   {
     title: "Data Structures & Algorithms",
@@ -49,7 +61,20 @@ export function ClassesGallery() {
               </CardHeader>
               <CardContent className="p-6">
                 <CardTitle className="font-headline text-xl mb-2">{c.title}</CardTitle>
-                <CardDescription className="text-base" dangerouslySetInnerHTML={{ __html: c.description }} />
+                <CardDescription asChild>
+                  {c.details ? (
+                    <div className="space-y-2 text-base">
+                      {c.details.map((detail, detailIndex) => (
+                        <div key={detailIndex} className="flex items-center gap-2">
+                          <detail.Icon className="h-4 w-4 text-muted-foreground" />
+                          <span>{detail.text}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-base" dangerouslySetInnerHTML={{ __html: c.description }} />
+                  )}
+                </CardDescription>
               </CardContent>
             </Card>
           ))}
