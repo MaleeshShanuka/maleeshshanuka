@@ -25,7 +25,7 @@ export function About() {
               height={500}
               alt="ICT Educator"
               data-ai-hint="teacher classroom"
-              className="aspect-square overflow-hidden rounded-xl object-cover"
+              className="rounded-xl object-contain"
             />
           </div>
         </div>
