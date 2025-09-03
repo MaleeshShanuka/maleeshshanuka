@@ -20,7 +20,7 @@ export function About() {
           </div>
           <div className="flex items-center justify-center">
             <Image
-              src="https://picsum.photos/500/500"
+              src="/teacher.png"
               width={500}
               height={500}
               alt="ICT Educator"
