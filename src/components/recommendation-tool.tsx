@@ -43,7 +43,7 @@ export function RecommendationTool() {
 
   return (
     <section id="recommendations" className="w-full py-12 md:py-24 lg:py-32 scroll-mt-16">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-6xl">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary">Find Your Perfect Course</h2>
