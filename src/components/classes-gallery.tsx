@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 const classes = [
   {
     title: "A/L 2027 Sinhala Medium Onikmin Kuliyapitiya",
-    description: "Master modern web technologies including React, Next.js, and serverless functions. This course covers everything from front-end frameworks to back-end architecture.",
+    description: "Time : 08.30 a.m. - 10.30 a.m.<br/>Day : Sunday<br/>Location: Kuliyapitiya",
     image: "https://picsum.photos/600/400",
     aiHint: "web development",
   },
@@ -49,7 +49,7 @@ export function ClassesGallery() {
               </CardHeader>
               <CardContent className="p-6">
                 <CardTitle className="font-headline text-xl mb-2">{c.title}</CardTitle>
-                <CardDescription className="text-base">{c.description}</CardDescription>
+                <CardDescription className="text-base" dangerouslySetInnerHTML={{ __html: c.description }} />
               </CardContent>
             </Card>
           ))}
