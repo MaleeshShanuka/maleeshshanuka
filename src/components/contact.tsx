@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
-import { Send, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react"
+import { Send, Facebook, Instagram, Linkedin, Twitter, Youtube, Mail } from "lucide-react"
 import Link from "next/link"
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -63,6 +63,9 @@ export function Contact() {
             </Link>
             <Link href="#" target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
+            </Link>
+            <Link href="mailto:example@example.com" target="_blank" rel="noopener noreferrer">
+              <Mail className="h-8 w-8 text-foreground/70 hover:text-primary transition-colors" />
             </Link>
           </div>
           <div className="w-full max-w-xl mx-auto pt-8">
