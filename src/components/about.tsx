@@ -14,9 +14,11 @@ export function About() {
                 BSc. (Hons) in Information Technology <br /> University of Moratuwa
               </h2>
             </div>
-            <p className="text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-justify">
-              Welcome to my digital classroom! With a passion for technology and a commitment to education, I've dedicated my career to demystifying Information and Communication Technology for Advanced Level students. From the intricacies of web development to the fundamentals of algorithm design, I believe in empowering the next generation of tech leaders. Here, you'll find the courses I offer to help students excel in their ICT journey.
-            </p>
+            <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-left py-4">
+              <div>Learn</div>
+              <div>Code</div>
+              <div>Create</div>
+            </div>
           </div>
           <div className="flex items-center justify-center">
             <Image
