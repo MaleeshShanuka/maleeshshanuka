@@ -24,19 +24,19 @@ const classes = [
       { iconName: "Calendar" as const, text: "Day : Sunday" },
       { iconName: "MapPin" as const, text: "Location : Kuliyapitiya" },
     ],
-    image: "/al2027.png",
+    imageSrc: "/al2027.png",
     aiHint: "information technology",
   },
   {
     title: "Data Structures & Algorithms",
     description: "Deep dive into the fundamental concepts of data structures and algorithms. Essential for competitive programming and technical interviews. Python and Java examples.",
-    image: "https://picsum.photos/600/401",
+    imageSrc: "https://picsum.photos/600/401",
     aiHint: "algorithm flowchart",
   },
   {
     title: "Cybersecurity Essentials",
     description: "Learn the principles of cybersecurity, including network security, cryptography, and ethical hacking. Protect systems from cyber threats and attacks.",
-    image: "https://picsum.photos/600/402",
+    imageSrc: "https://picsum.photos/600/402",
     aiHint: "cyber security",
   },
 ];
@@ -58,7 +58,7 @@ export function ClassesGallery() {
             <Card key={index} className="overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
               <CardHeader className="p-0">
                 <Image
-                  src={c.image}
+                  src={c.imageSrc}
                   width={600}
                   height={400}
                   alt={c.title}
