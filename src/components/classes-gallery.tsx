@@ -24,7 +24,7 @@ const classes = [
       { iconName: "Calendar" as const, text: "Day : Sunday" },
       { iconName: "MapPin" as const, text: "Location : Kuliyapitiya" },
     ],
-    image: "/al2027class.png",
+    image: "https://picsum.photos/600/400",
     aiHint: "information technology",
   },
   {
@@ -82,7 +82,7 @@ export function ClassesGallery() {
                       })}
                     </div>
                   ) : (
-                    <div className="text-base" dangerouslySetInnerHTML={{ __html: c.description as string }} />
+                    <div className="text-base">{c.description}</div>
                   )}
                 </CardDescription>
               </CardContent>
