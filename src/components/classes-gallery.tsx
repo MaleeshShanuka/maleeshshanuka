@@ -65,7 +65,7 @@ const classes = [
     details: [
       { iconName: "Book" as const, text: "Type : Theory" },
       { iconName: "Clock" as const, text: "Time : 03.30 pm - 05.30 pm" },
-      { iconName: "Calendar" as const, text: "Day : Saturday" },
+      { iconName: "Calendar" as const, text: "Day : Sunday" },
       { iconName: "MapPin" as const, text: "Location : Narammala" },
     ],
     imageSrc: "https://picsum.photos/600/404",
