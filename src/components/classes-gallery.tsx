@@ -20,7 +20,7 @@ const classes = [
     title: "A/L 2027 Sinhala Medium Onikmin Kuliyapitiya",
     details: [
       { iconName: "Book" as const, text: "Type : Theory" },
-      { iconName: "Clock" as const, text: "Time : 08.30 am - 10.30 am" },
+      { iconName: "Clock" as const, text: "Time : 10.30 am - 12.30 pm" },
       { iconName: "Calendar" as const, text: "Day : Sunday" },
       { iconName: "MapPin" as const, text: "Location : Kuliyapitiya" },
     ],
@@ -64,7 +64,7 @@ const classes = [
     title: "A/L 2026 Sinhala Medium A Sakul Narammala",
     details: [
       { iconName: "Book" as const, text: "Type : Theory" },
-      { iconName: "Clock" as const, text: "Time : 05.30 pm - 08.30 pm" },
+      { iconName: "Clock" as const, text: "Time : 05.30 pm - 08.00 pm" },
       { iconName: "Calendar" as const, text: "Day : Sunday" },
       { iconName: "MapPin" as const, text: "Location : Narammala" },
     ],
