@@ -1,6 +1,6 @@
 "use client"
 
-import { useFormState, useFormStatus } from "react-dom"
+import { useFormStatus } from "react-dom"
 import { sendEmail } from "@/app/actions"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Send, Facebook, Instagram, Linkedin, Youtube, Mail } from "lucide-react"
 import Link from "next/link"
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useActionState } from "react"
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg 
@@ -55,7 +55,7 @@ function SubmitButton() {
 }
 
 export function Contact() {
-  const [state, formAction] = useFormState(sendEmail, initialState);
+  const [state, formAction] = useActionState(sendEmail, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
