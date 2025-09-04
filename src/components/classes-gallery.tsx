@@ -96,7 +96,7 @@ export function ClassesGallery() {
             </p>
           </div>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-12">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-12 justify-center">
           {classes.map((c, index) => (
             <Card key={index} className="overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
               <CardHeader className="p-0">
