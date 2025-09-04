@@ -39,8 +39,13 @@ const classes = [
     aiHint: "algorithm flowchart",
   },
   {
-    title: "Cybersecurity Essentials",
-    description: "Learn the principles of cybersecurity, including network security, cryptography, and ethical hacking. Protect systems from cyber threats and attacks.",
+    title: "A/L 2026 Sinhala Medium Onikmin Kuliyapitiya",
+    details: [
+        { iconName: "Book" as const, text: "Type : Theory" },
+        { iconName: "Clock" as const, text: "Time : 08.00 am - 10.30 am" },
+        { iconName: "Calendar" as const, text: "Day : Sunday" },
+        { iconName: "MapPin" as const, text: "Location : Kuliyapitiya" },
+    ],
     imageSrc: "https://picsum.photos/600/402",
     aiHint: "cyber security",
   },
