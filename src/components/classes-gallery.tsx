@@ -68,7 +68,7 @@ export function ClassesGallery() {
               </CardHeader>
               <CardContent className="p-6">
                 <CardTitle className="font-headline text-xl mb-2">{c.title}</CardTitle>
-                <CardDescription asChild>
+                <CardDescription>
                   {c.details ? (
                     <div className="space-y-2 text-base">
                       {c.details.map((detail, detailIndex) => {
