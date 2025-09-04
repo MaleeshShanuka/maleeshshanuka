@@ -49,11 +49,22 @@ const classes = [
     imageSrc: "https://picsum.photos/600/402",
     aiHint: "cyber security",
   },
+  {
+    title: "A/L 2027 Sinhala Medium A Sakul Narammala",
+    details: [
+      { iconName: "Book" as const, text: "Type : Theory" },
+      { iconName: "Clock" as const, text: "Time : 05.30 pm - 08.30 pm" },
+      { iconName: "Calendar" as const, text: "Day : Sunday" },
+      { iconName: "MapPin" as const, text: "Location : Narammala" },
+    ],
+    imageSrc: "https://picsum.photos/600/403",
+    aiHint: "education technology",
+  },
 ];
 
 export function ClassesGallery() {
   return (
-    <section id="classes" className="w-full pt-6 md:pt-8 lg:pt-12 pb-0 bg-card scroll-mt-16">
+    <section id="classes" className="w-full pt-6 md:pt-8 lg:pt-12 pb-12 bg-card scroll-mt-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
@@ -63,7 +74,7 @@ export function ClassesGallery() {
             </p>
           </div>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-12">
           {classes.map((c, index) => (
             <Card key={index} className="overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
               <CardHeader className="p-0">
@@ -79,21 +90,17 @@ export function ClassesGallery() {
               <CardContent className="p-6">
                 <CardTitle className="font-headline text-xl mb-2">{c.title}</CardTitle>
                 <CardDescription>
-                  {c.details ? (
-                    <div className="space-y-2 text-base">
-                      {c.details.map((detail, detailIndex) => {
-                        const Icon = icons[detail.iconName];
-                        return (
-                          <div key={detailIndex} className="flex items-center gap-2">
-                            <Icon className="h-4 w-4 text-muted-foreground" />
-                            <span>{detail.text}</span>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  ) : (
-                    <div className="text-base">{c.description}</div>
-                  )}
+                  <div className="space-y-2 text-base">
+                    {c.details.map((detail, detailIndex) => {
+                      const Icon = icons[detail.iconName];
+                      return (
+                        <div key={detailIndex} className="flex items-center gap-2">
+                          <Icon className="h-4 w-4 text-muted-foreground" />
+                          <span>{detail.text}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </CardDescription>
               </CardContent>
             </Card>
