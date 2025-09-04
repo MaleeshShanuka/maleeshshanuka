@@ -4,21 +4,26 @@ import { Clock, Calendar, MapPin } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 type ClassDetail = {
-  Icon: LucideIcon;
+  iconName: "Clock" | "Calendar" | "MapPin";
   text: string;
+};
+
+const icons: { [key: string]: LucideIcon } = {
+  Clock,
+  Calendar,
+  MapPin,
 };
 
 const classes = [
   {
     title: "A/L 2027 Sinhala Medium Onikmin Kuliyapitiya",
     details: [
-      { Icon: Clock, text: "Time : 08.30 am - 10.30 am" },
-      { Icon: Calendar, text: "Day : Sunday" },
-      { Icon: MapPin, text: "Location: Kuliyapitiya" },
+      { iconName: "Clock" as const, text: "Time : 08.30 am - 10.30 am" },
+      { iconName: "Calendar" as const, text: "Day : Sunday" },
+      { iconName: "MapPin" as const, text: "Location: Kuliyapitiya" },
     ],
     image: "https://picsum.photos/600/400",
     aiHint: "web development",
-    description: "Time : 08.30 am - 10.30 am<br/>Day : Sunday<br/>Location: Kuliyapitiya",
   },
   {
     title: "Data Structures & Algorithms",
@@ -64,15 +69,18 @@ export function ClassesGallery() {
                 <CardDescription asChild>
                   {c.details ? (
                     <div className="space-y-2 text-base">
-                      {c.details.map((detail, detailIndex) => (
-                        <div key={detailIndex} className="flex items-center gap-2">
-                          <detail.Icon className="h-4 w-4 text-muted-foreground" />
-                          <span>{detail.text}</span>
-                        </div>
-                      ))}
+                      {c.details.map((detail, detailIndex) => {
+                        const Icon = icons[detail.iconName];
+                        return (
+                          <div key={detailIndex} className="flex items-center gap-2">
+                            <Icon className="h-4 w-4 text-muted-foreground" />
+                            <span>{detail.text}</span>
+                          </div>
+                        );
+                      })}
                     </div>
                   ) : (
-                    <div className="text-base" dangerouslySetInnerHTML={{ __html: c.description }} />
+                    <div className="text-base" dangerouslySetInnerHTML={{ __html: c.description as string }} />
                   )}
                 </CardDescription>
               </CardContent>
