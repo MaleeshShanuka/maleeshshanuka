@@ -1,12 +1,14 @@
 "use client"
 
+import { useFormState, useFormStatus } from "react-dom"
+import { sendEmail } from "@/app/actions"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Send, Facebook, Instagram, Linkedin, Youtube, Mail } from "lucide-react"
 import Link from "next/link"
-import React from "react"
+import React, { useRef, useEffect } from "react"
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg 
@@ -38,7 +40,31 @@ const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
+const initialState = {
+  mailto: "",
+}
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <Button type="submit" size="lg" disabled={pending}>
+        <Send className="mr-2 h-4 w-4" />
+        {pending ? "Sending..." : "Send Message"}
+    </Button>
+  )
+}
+
 export function Contact() {
+  const [state, formAction] = useFormState(sendEmail, initialState);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (state.mailto) {
+      window.location.href = state.mailto;
+      formRef.current?.reset();
+    }
+  }, [state]);
+
   return (
     <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-card scroll-mt-16">
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
@@ -74,9 +100,8 @@ export function Contact() {
           </div>
           <div className="w-full max-w-xl mx-auto pt-8">
             <form 
-              action="mailto:maleeshshanuka@gmail.com" 
-              method="post" 
-              encType="text/plain"
+              ref={formRef}
+              action={formAction}
               className="grid gap-6"
             >
               <div className="grid sm:grid-cols-2 gap-6">
@@ -98,10 +123,7 @@ export function Contact() {
                 <Textarea id="message" name="body" placeholder="Your message..." rows={5} required />
               </div>
               <div className="flex justify-center">
-                <Button type="submit" size="lg">
-                    <Send className="mr-2 h-4 w-4" />
-                    Send Message
-                </Button>
+                <SubmitButton />
               </div>
             </form>
           </div>
