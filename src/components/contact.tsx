@@ -7,6 +7,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 import { Send, Facebook, Instagram, Linkedin, Youtube, Mail } from "lucide-react"
 import Link from "next/link"
+import React from "react"
+import { sendEmailAction } from "@/app/actions"
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg 
@@ -40,14 +42,32 @@ const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export function Contact() {
     const { toast } = useToast()
+    const formRef = React.useRef<HTMLFormElement>(null);
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        toast({
-            title: "Message Sent!",
-            description: "Thank you for reaching out. I'll get back to you soon.",
-        });
-        (event.target as HTMLFormElement).reset();
+        const formData = new FormData(event.currentTarget);
+        
+        try {
+            const result = await sendEmailAction(formData);
+            
+            toast({
+                title: "Email Ready to Send!",
+                description: "Your email client is opening with the message.",
+            });
+
+            if (result.mailtoLink) {
+              window.location.href = result.mailtoLink;
+            }
+
+            formRef.current?.reset();
+        } catch (error) {
+            toast({
+                title: "Error",
+                description: "Something went wrong. Please try again.",
+                variant: "destructive"
+            });
+        }
     }
 
   return (
@@ -84,24 +104,24 @@ export function Contact() {
             </Link>
           </div>
           <div className="w-full max-w-xl mx-auto pt-8">
-            <form onSubmit={handleSubmit} className="grid gap-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="grid gap-6">
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="space-y-2 text-left">
                   <Label htmlFor="name">Name</Label>
-                  <Input id="name" type="text" placeholder="Your Name" required />
+                  <Input id="name" name="name" type="text" placeholder="Your Name" required />
                 </div>
                 <div className="space-y-2 text-left">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="your@email.com" required />
+                  <Input id="email" name="email" type="email" placeholder="your@email.com" required />
                 </div>
               </div>
               <div className="space-y-2 text-left">
                 <Label htmlFor="whatsapp">WhatsApp Number (Optional)</Label>
-                <Input id="whatsapp" type="tel" placeholder="+94 77 123 4567" />
+                <Input id="whatsapp" name="whatsapp" type="tel" placeholder="+94 77 123 4567" />
               </div>
               <div className="space-y-2 text-left">
                 <Label htmlFor="message">Message</Label>
-                <Textarea id="message" placeholder="Your message..." rows={5} required />
+                <Textarea id="message" name="message" placeholder="Your message..." rows={5} required />
               </div>
               <div className="flex justify-center">
                 <Button type="submit" size="lg">
