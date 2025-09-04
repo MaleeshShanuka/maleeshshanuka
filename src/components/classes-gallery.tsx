@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Clock, Calendar, MapPin } from "lucide-react";
+import { Clock, Calendar, MapPin, Book } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 type ClassDetail = {
-  iconName: "Clock" | "Calendar" | "MapPin";
+  iconName: "Clock" | "Calendar" | "MapPin" | "Book";
   text: string;
 };
 
@@ -12,12 +12,14 @@ const icons: { [key: string]: LucideIcon } = {
   Clock,
   Calendar,
   MapPin,
+  Book,
 };
 
 const classes = [
   {
     title: "A/L 2027 Sinhala Medium Onikmin Kuliyapitiya",
     details: [
+      { iconName: "Book" as const, text: "Type : Theory" },
       { iconName: "Clock" as const, text: "Time : 08.30 am - 10.30 am" },
       { iconName: "Calendar" as const, text: "Day : Sunday" },
       { iconName: "MapPin" as const, text: "Location: Kuliyapitiya" },
