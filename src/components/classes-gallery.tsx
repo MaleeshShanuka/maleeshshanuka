@@ -24,8 +24,8 @@ const classes = [
       { iconName: "Calendar" as const, text: "Day : Sunday" },
       { iconName: "MapPin" as const, text: "Location : Kuliyapitiya" },
     ],
-    image: "https://picsum.photos/600/400",
-    aiHint: "web development",
+    image: "/al-2027-class.png",
+    aiHint: "information technology",
   },
   {
     title: "Data Structures & Algorithms",
