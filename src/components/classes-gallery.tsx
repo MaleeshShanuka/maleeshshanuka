@@ -22,7 +22,7 @@ const classes = [
       { iconName: "Book" as const, text: "Type : Theory" },
       { iconName: "Clock" as const, text: "Time : 08.30 am - 10.30 am" },
       { iconName: "Calendar" as const, text: "Day : Sunday" },
-      { iconName: "MapPin" as const, text: "Location: Kuliyapitiya" },
+      { iconName: "MapPin" as const, text: "Location : Kuliyapitiya" },
     ],
     image: "https://picsum.photos/600/400",
     aiHint: "web development",
