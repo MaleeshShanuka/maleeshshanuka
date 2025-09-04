@@ -24,7 +24,7 @@ const classes = [
       { iconName: "Calendar" as const, text: "Day : Sunday" },
       { iconName: "MapPin" as const, text: "Location : Kuliyapitiya" },
     ],
-    imageSrc: "https://picsum.photos/600/400",
+    imageSrc: "/al2027sm.png",
     aiHint: "information communication technology",
   },
   {
@@ -35,7 +35,7 @@ const classes = [
       { iconName: "Calendar" as const, text: "Day : Sunday" },
       { iconName: "MapPin" as const, text: "Location : Kuliyapitiya" },
     ],
-    imageSrc: "https://picsum.photos/600/401",
+    imageSrc: "/al2027em.png",
     aiHint: "algorithm flowchart",
   },
   {
@@ -46,7 +46,7 @@ const classes = [
       { iconName: "Calendar" as const, text: "Day : Sunday" },
       { iconName: "MapPin" as const, text: "Location : Narammala" },
     ],
-    imageSrc: "https://picsum.photos/600/404",
+    imageSrc: "/al2027sm.png",
     aiHint: "programming code",
   },
   {
@@ -57,7 +57,7 @@ const classes = [
         { iconName: "Calendar" as const, text: "Day : Sunday" },
         { iconName: "MapPin" as const, text: "Location : Kuliyapitiya" },
     ],
-    imageSrc: "https://picsum.photos/600/402",
+    imageSrc: "/al2026sm.png",
     aiHint: "cyber security",
   },
   {
@@ -68,7 +68,7 @@ const classes = [
       { iconName: "Calendar" as const, text: "Day : Sunday" },
       { iconName: "MapPin" as const, text: "Location : Narammala" },
     ],
-    imageSrc: "https://picsum.photos/600/403",
+    imageSrc: "/al2026sm.png",
     aiHint: "education technology",
   },
   {
@@ -79,7 +79,7 @@ const classes = [
       { iconName: "Calendar" as const, text: "Day : Monday" },
       { iconName: "MapPin" as const, text: "Location : Kuliyapitiya" },
     ],
-    imageSrc: "https://picsum.photos/600/405",
+    imageSrc: "/al2025sm.png",
     aiHint: "revision class",
   },
 ];
