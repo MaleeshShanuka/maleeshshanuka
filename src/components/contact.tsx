@@ -4,11 +4,9 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { useToast } from "@/hooks/use-toast"
 import { Send, Facebook, Instagram, Linkedin, Youtube, Mail } from "lucide-react"
 import Link from "next/link"
 import React from "react"
-import { sendEmailAction } from "@/app/actions"
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg 
@@ -41,35 +39,6 @@ const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
 )
 
 export function Contact() {
-    const { toast } = useToast()
-    const formRef = React.useRef<HTMLFormElement>(null);
-
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        const formData = new FormData(event.currentTarget);
-        
-        try {
-            const result = await sendEmailAction(formData);
-            
-            toast({
-                title: "Email Ready to Send!",
-                description: "Your email client is opening with the message.",
-            });
-
-            if (result.mailtoLink) {
-              window.location.href = result.mailtoLink;
-            }
-
-            formRef.current?.reset();
-        } catch (error) {
-            toast({
-                title: "Error",
-                description: "Something went wrong. Please try again.",
-                variant: "destructive"
-            });
-        }
-    }
-
   return (
     <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-card scroll-mt-16">
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
@@ -104,7 +73,12 @@ export function Contact() {
             </Link>
           </div>
           <div className="w-full max-w-xl mx-auto pt-8">
-            <form ref={formRef} onSubmit={handleSubmit} className="grid gap-6">
+            <form 
+              action="mailto:maleeshshanuka@gmail.com" 
+              method="post" 
+              encType="text/plain"
+              className="grid gap-6"
+            >
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="space-y-2 text-left">
                   <Label htmlFor="name">Name</Label>
@@ -121,7 +95,7 @@ export function Contact() {
               </div>
               <div className="space-y-2 text-left">
                 <Label htmlFor="message">Message</Label>
-                <Textarea id="message" name="message" placeholder="Your message..." rows={5} required />
+                <Textarea id="message" name="body" placeholder="Your message..." rows={5} required />
               </div>
               <div className="flex justify-center">
                 <Button type="submit" size="lg">
