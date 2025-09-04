@@ -71,6 +71,17 @@ const classes = [
     imageSrc: "https://picsum.photos/600/404",
     aiHint: "programming code",
   },
+  {
+    title: "A/L 2025 Sinhala Medium Onikmin Kuliyapitiya",
+    details: [
+      { iconName: "Book" as const, text: "Type : Revision" },
+      { iconName: "Clock" as const, text: "Time : 08.30 am - 02.30 pm" },
+      { iconName: "Calendar" as const, text: "Day : Monday" },
+      { iconName: "MapPin" as const, text: "Location : Kuliyapitiya" },
+    ],
+    imageSrc: "https://picsum.photos/600/405",
+    aiHint: "revision class",
+  },
 ];
 
 export function ClassesGallery() {
