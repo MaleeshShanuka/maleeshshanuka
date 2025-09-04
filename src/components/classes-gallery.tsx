@@ -24,7 +24,7 @@ const classes = [
       { iconName: "Calendar" as const, text: "Day : Sunday" },
       { iconName: "MapPin" as const, text: "Location : Kuliyapitiya" },
     ],
-    image: "/al-2027-class.png",
+    image: "/al2027class.png",
     aiHint: "information technology",
   },
   {
