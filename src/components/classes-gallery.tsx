@@ -28,10 +28,10 @@ const classes = [
     aiHint: "information communication technology",
   },
   {
-    title: "Data Structures & Algorithms",
+    title: "A/L 2027 English Medium Onikmin Kuliyapitiya",
     details: [
       { iconName: "Book" as const, text: "Type : Theory" },
-      { iconName: "Clock" as const, text: "Time : 08.30 am - 10.30 am" },
+      { iconName: "Clock" as const, text: "Time : 12.30 pm - 02.30 pm" },
       { iconName: "Calendar" as const, text: "Day : Sunday" },
       { iconName: "MapPin" as const, text: "Location : Kuliyapitiya" },
     ],
