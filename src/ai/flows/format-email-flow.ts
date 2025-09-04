@@ -35,7 +35,7 @@ const formatEmailGenkitFlow = ai.defineFlow(
     const recipient = 'maleeshshanuka@gmail.com';
     const subject = `New Message from ${input.name}`;
     
-    let body = `You have received a new message from your portfolio contact form:\n\n`;
+    let body = `New message from portfolio contact form:\n\n`;
     body += `Name: ${input.name}\n`;
     body += `Email: ${input.email}\n`;
     if (input.whatsapp) {
