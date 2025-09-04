@@ -60,6 +60,17 @@ const classes = [
     imageSrc: "https://picsum.photos/600/403",
     aiHint: "education technology",
   },
+  {
+    title: "A/L 2027 Sinhala Medium A Sakul Narammala",
+    details: [
+      { iconName: "Book" as const, text: "Type : Theory" },
+      { iconName: "Clock" as const, text: "Time : 03.30 pm - 05.30 pm" },
+      { iconName: "Calendar" as const, text: "Day : Saturday" },
+      { iconName: "MapPin" as const, text: "Location : Narammala" },
+    ],
+    imageSrc: "https://picsum.photos/600/404",
+    aiHint: "programming code",
+  },
 ];
 
 export function ClassesGallery() {
