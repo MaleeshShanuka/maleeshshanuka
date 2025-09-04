@@ -50,7 +50,7 @@ const classes = [
     aiHint: "cyber security",
   },
   {
-    title: "A/L 2027 Sinhala Medium A Sakul Narammala",
+    title: "A/L 2026 Sinhala Medium A Sakul Narammala",
     details: [
       { iconName: "Book" as const, text: "Type : Theory" },
       { iconName: "Clock" as const, text: "Time : 05.30 pm - 08.30 pm" },
