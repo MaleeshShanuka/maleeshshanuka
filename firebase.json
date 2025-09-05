@@ -1,13 +1,26 @@
 {
   "hosting": {
+<<<<<<< HEAD
     "source": ".",
+=======
+    "public": "out",
+>>>>>>> f4ab376a1a37e2f75b2f9e733ca4c8f1c3812a34
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
+<<<<<<< HEAD
     "frameworksBackend": {
       "region": "asia-east1"
     }
+=======
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+>>>>>>> f4ab376a1a37e2f75b2f9e733ca4c8f1c3812a34
   }
 }

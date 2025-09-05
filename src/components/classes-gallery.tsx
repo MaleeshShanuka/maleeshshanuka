@@ -90,7 +90,7 @@ export function ClassesGallery() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary" dangerouslySetInnerHTML={{ __html: 'Our&nbsp;Classes' }} />
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary">Our&nbsp;Classes</h2>
             <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Join with our A/L classes to gather a deep knowledge and advanced skills in Information and Communication Technology
             </p>

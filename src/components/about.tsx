@@ -16,8 +16,8 @@ export function About() {
             </div>
             <div className="text-5xl md:text-6xl lg:text-7xl font-extrabold py-4 tracking-tight space-y-4">
               <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">"Learn</div>
-              <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent" dangerouslySetInnerHTML={{ __html: '&nbsp;&nbsp;Code' }} />
-              <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent" dangerouslySetInnerHTML={{ __html: '&nbsp;&nbsp;Create"' }} />
+              <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">&nbsp;&nbsp;Code</div>
+              <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">&nbsp;&nbsp;Create"</div>
             </div>
           </div>
           <div className="flex items-center justify-center">

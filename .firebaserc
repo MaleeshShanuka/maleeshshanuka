@@ -1,5 +1,9 @@
 {
   "projects": {
+<<<<<<< HEAD
     "default": "maleeshshanukaweb"
+=======
+    "default": "maleesh-shanuka"
+>>>>>>> f4ab376a1a37e2f75b2f9e733ca4c8f1c3812a34
   }
 }
