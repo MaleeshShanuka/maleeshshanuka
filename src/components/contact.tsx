@@ -1,14 +1,12 @@
 "use client"
 
-import { useFormStatus } from "react-dom"
-import { sendEmail } from "@/app/actions"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Send, Facebook, Instagram, Linkedin, Youtube, Mail } from "lucide-react"
 import Link from "next/link"
-import React, { useRef, useEffect, useActionState } from "react"
+import React, { useRef, useState } from "react"
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg 
@@ -40,30 +38,33 @@ const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-const initialState = {
-  mailto: "",
-}
-
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" size="lg" disabled={pending}>
-        <Send className="mr-2 h-4 w-4" />
-        {pending ? "Sending..." : "Send Message"}
-    </Button>
-  )
-}
-
 export function Contact() {
-  const [state, formAction] = useActionState(sendEmail, initialState);
   const formRef = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => {
-    if (state.mailto) {
-      window.location.href = state.mailto;
-      formRef.current?.reset();
-    }
-  }, [state]);
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const whatsapp = formData.get('whatsapp') as string;
+    const body = formData.get('body') as string;
+
+    const subject = "New message from portfolio contact form";
+    const emailBody = `New message from portfolio contact form
+Name: ${name}
+Email: ${email}
+WhatsApp: ${whatsapp || 'not provided'}
+Message:
+${body}`;
+
+    const mailtoLink = `mailto:maleeshshanuka@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    window.location.href = mailtoLink;
+    formRef.current?.reset();
+    setIsSubmitting(false);
+  };
 
   return (
     <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-card scroll-mt-16">
@@ -101,7 +102,7 @@ export function Contact() {
           <div className="w-full max-w-xl mx-auto pt-8">
             <form 
               ref={formRef}
-              action={formAction}
+              onSubmit={handleSubmit}
               className="grid gap-6"
             >
               <div className="grid sm:grid-cols-2 gap-6">
@@ -123,7 +124,10 @@ export function Contact() {
                 <Textarea id="message" name="body" placeholder="Your message..." rows={5} required />
               </div>
               <div className="flex justify-center">
-                <SubmitButton />
+                <Button type="submit" size="lg" disabled={isSubmitting}>
+                    <Send className="mr-2 h-4 w-4" />
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                </Button>
               </div>
             </form>
           </div>
