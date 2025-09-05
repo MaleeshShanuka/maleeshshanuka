@@ -4,11 +4,9 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { useToast } from "@/hooks/use-toast"
 import { Send, Facebook, Instagram, Linkedin, Youtube, Mail } from "lucide-react"
 import Link from "next/link"
-import React from "react"
-import { sendEmailAction } from "@/app/actions"
+import React, { useRef, useState } from "react"
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg 
@@ -41,34 +39,32 @@ const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
 )
 
 export function Contact() {
-    const { toast } = useToast()
-    const formRef = React.useRef<HTMLFormElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        const formData = new FormData(event.currentTarget);
-        
-        try {
-            const result = await sendEmailAction(formData);
-            
-            toast({
-                title: "Email Ready to Send!",
-                description: "Your email client is opening with the message.",
-            });
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const whatsapp = formData.get('whatsapp') as string;
+    const body = formData.get('body') as string;
 
-            if (result.mailtoLink) {
-              window.location.href = result.mailtoLink;
-            }
+    const subject = "New message from portfolio contact form";
+    const emailBody = `New message from portfolio contact form
+Name: ${name}
+Email: ${email}
+WhatsApp: ${whatsapp || 'not provided'}
+Message:
+${body}`;
 
-            formRef.current?.reset();
-        } catch (error) {
-            toast({
-                title: "Error",
-                description: "Something went wrong. Please try again.",
-                variant: "destructive"
-            });
-        }
-    }
+    const mailtoLink = `mailto:maleeshshanuka@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    window.location.href = mailtoLink;
+    formRef.current?.reset();
+    setIsSubmitting(false);
+  };
 
   return (
     <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-card scroll-mt-16">
@@ -104,7 +100,11 @@ export function Contact() {
             </Link>
           </div>
           <div className="w-full max-w-xl mx-auto pt-8">
-            <form ref={formRef} onSubmit={handleSubmit} className="grid gap-6">
+            <form 
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="grid gap-6"
+            >
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="space-y-2 text-left">
                   <Label htmlFor="name">Name</Label>
@@ -121,12 +121,12 @@ export function Contact() {
               </div>
               <div className="space-y-2 text-left">
                 <Label htmlFor="message">Message</Label>
-                <Textarea id="message" name="message" placeholder="Your message..." rows={5} required />
+                <Textarea id="message" name="body" placeholder="Your message..." rows={5} required />
               </div>
               <div className="flex justify-center">
-                <Button type="submit" size="lg">
+                <Button type="submit" size="lg" disabled={isSubmitting}>
                     <Send className="mr-2 h-4 w-4" />
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </div>
             </form>
